@@ -16,4 +16,7 @@ imágenes entre paréntesis y corchetes "! , []"
 
 *cursiva*
 
-'código'
+```
+código con comillas francesas
+```
+o `comillas simple`

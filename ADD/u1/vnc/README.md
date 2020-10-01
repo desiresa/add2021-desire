@@ -1,11 +1,14 @@
-# 1. Windows: VNC
+# 1. Windows: *Server*
 - Configurar dos máquinas Windows (7,8,10)
-- Descargar TightVNC. 
-- Habilitar en el cortafuegos el servidor VNC.
+- Descargar TightVNC -> Custom -> **Server** 
+![captura1.img]  F:\ASIR-2\ADD\add2021-desire\ADD\u1\vnc\images\captura1 
 
-## 1.2 Windows: Cliente
+- Revisar que la configuración del cortafuegos del servidor VNC Windows para permitir VNC.
 
-- En el cliente instalar `TightVNC -> Custom -> Viewer`.
->
-**NOTA**
->
+## 1.2 Windows: *Cliente*
+
+- En el cliente instalar `TightVNC -> Custom -> **Viewer**`.
+
+## 2. Comprobaciones finales
+
+- Conectar desde Windows *Server* hacia el Windows *Cliente*.

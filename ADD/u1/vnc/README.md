@@ -1,8 +1,11 @@
 # 1. Windows: *Server*
 - Configurar dos máquinas Windows (7,8,10)
-- Descargar TightVNC -> Custom -> **Server** 
 
 ![](./images/captura1.png)  
+
+- Descargar TightVNC -> Custom -> **Server** 
+
+![](./images/captura2.png)  
 
 
 

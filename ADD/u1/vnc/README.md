@@ -28,7 +28,7 @@
 
 - Y nos saldra el escritorio del cliente
 
-![](./images/CAPTURA4 (1).png)
+![](./images/captura4.png)
 
 - Ir al servidor VNC y usar el comando netstat -n para ver las conexiones VNC con el cliente.
 

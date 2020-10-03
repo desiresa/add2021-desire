@@ -4,9 +4,6 @@
 ![](./images/captura1.png)  
 
 - Descargar TightVNC.
-
-![](./images/captura5.png)  
-
 - E instalar el *Server* 
 
 ![](./images/captura9.png)
@@ -27,11 +24,11 @@
 
 - Introducir la IP del cliente
 
-![](./images/captura5.png)  
+![](./images/captura6.png)
 
 - Y nos saldra el escritorio del cliente
 
-![](./images/captura4.png)
+![](./images/CAPTURA4 (1).png)
 
 - Ir al servidor VNC y usar el comando netstat -n para ver las conexiones VNC con el cliente.
 

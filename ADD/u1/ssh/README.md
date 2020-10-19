@@ -105,15 +105,16 @@ Vamos a crear una restricción de uso del SSH para un usuario:
   - Nombre de equipo: server18s
 - Añadir en `C:\Windows\System32\drivers\etc\hosts` el equipo client18g y client18w.
 
-![](images/cliente/host1.png)
+![](images/cliente/25.png)
 
 - Comprobar haciendo ping a ambos equipos
 
-![](images/cliente/2.png)
+![](images/cliente/21.png)
 
 - Comprobar acceso SSH desde los clientes Windows
 
-![](images/cliente/1.png)
+![](images/cliente/20.png)
 
+- 
 
-![](images/cliente/4.png)
+![](images/cliente/24.png)

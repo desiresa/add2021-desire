@@ -115,4 +115,5 @@ Vamos a crear una restricción de uso del SSH para un usuario:
 
 ![](images/cliente/1.png)
 
+
 ![](images/cliente/4.png)

@@ -48,9 +48,10 @@ Comprobar el funcionamiento de la conexión SSH desde cada cliente usando sanche
 ![](images/cliente/14.png)
 
 - Comprobar que ahora al acceder remotamente vía SSH:
-  - Desde client18g, NO se pide password.   
+  - Desde client18g, NO se pide password.  
   - Desde client18w, SI se pide password.
 
+![](images/cliente/19.png)
 
 ## (6) Uso de SSH como túnel para X
 
@@ -62,7 +63,6 @@ Comprobar el funcionamiento de la conexión SSH desde cada cliente usando sanche
 
 - Reiniciar el servicio SSH para que se lean los cambios de configuración.
 
-![](images/server/)
 
 Vamos a client18g:
 
@@ -104,5 +104,15 @@ Vamos a crear una restricción de uso del SSH para un usuario:
   - SO Windows Server
   - Nombre de equipo: server18s
 - Añadir en `C:\Windows\System32\drivers\etc\hosts` el equipo client18g y client18w.
+
+![](images/cliente/host1.png)
+
 - Comprobar haciendo ping a ambos equipos
-- 
+
+![](images/cliente/2.png)
+
+- Comprobar acceso SSH desde los clientes Windows
+
+![](images/cliente/1.png)
+
+![](images/cliente/4.png)

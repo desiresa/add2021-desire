@@ -4,8 +4,7 @@
 
 - `cp /etc/samba/smb.conf /etc/samba/smb.conf.bak`, hacer una copia de seguridad del fichero de configuración antes de modificarlo.
 
-
-
+![]()
 
 # (1.5) Crear los recursos compartidos de red
 
@@ -52,7 +51,7 @@ Vamos a configurar los recursos compartidos de red en el servidor, modificando e
 
 Desde el cliente Windows vamos a acceder a los recursos compartidos del servidor Samba
 
-- Escribimos \\192.168.1.31 o 172.19.18.31 y vemos lo siguiente.
+- Escribimos \\172.19.18.31 y vemos lo siguiente.
 
 - Accedemos al recurso compartido "barco" con el usuario "pirata1"
 
@@ -87,7 +86,7 @@ Desde el cliente Windows vamos a acceder a los recursos compartidos del servidor
   - `net use * /d /y`, para cerrar las conexiones SMB.
   - `net use`, ahora vemos que no hay conexiones establecidas.
 
-- `net view \\192.168.1.31 o 172.19.18.31`, para ver los recursos de esta máquina.
+- `net view \\172.19.18.31`, para ver los recursos de esta máquina.
 
 ![](images/windows/14.png)
 
@@ -121,18 +120,43 @@ Desde el entorno gráfico de client18g, podemos comprobar el acceso a recursos c
 
 - Vamos a una carpeta, y escribimos en la ruta `smb://172.19.18.31`.
 
-![]()
+![](images/cliente/1.png)
 
 - Probamos a crear carpetas en `barco`.
 
-![]()
+![](images/cliente/2.png)
 
 - Comprobamos en el servidor Samba:
 
 - `smbstatus`
 
+![](images/server/client1.png)
+
 - `lsof -i`
+
+![](images/server/client2.png)
 
 # 3.2 Cliente GNU/Linux comandos
 
-- Vamos a nuestro cliente Samba de Linux.
+- Vamos a nuestro cliente Samba de Linux. Desde este equipo accederemos a la carpeta compartida.
+
+- Probar desde el cliente, el comando `smbclient --list 172.19.18.31`.
+
+![](images/cliente/15.png)
+
+- Ahora crearemos en local la carpeta `/mnt/remoto18/castillo`.
+
+- Con el usuario root, usamos el siguiente comando para montar un recurso compartido de Samba Server, como si fuera una carpeta más de nuestro sistema: `mount -t cifs //172.19.18.31/castillo /mnt/remoto18/castillo -o username=soldado1`.
+
+- `df -hT`, para comprobar que el recurso ha sido montado.
+
+![](images/cliente/22.png)
+
+- Y comprobamos desde el Servidor:
+  - `sudo smbstatus`.
+
+![](images/server/20.png)
+
+  - `sudo lsof -i`.
+
+![](images/server/2.png)

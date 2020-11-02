@@ -4,7 +4,7 @@
 
 - `cp /etc/samba/smb.conf /etc/samba/smb.conf.bak`, hacer una copia de seguridad del fichero de configuración antes de modificarlo.
 
-![]()
+![](images/server/samba.png)
 
 # (1.5) Crear los recursos compartidos de red
 

@@ -1,5 +1,5 @@
 # Servidor de Impresión GNU/Linux (CUPS)
-## 2. Comprbar que el Servicio está en ejecución
+## 2. Comprobar que el Servicio está en ejecución
 
 - Instalar el sistema de impresión de CUPS para GNU/Linux.
 

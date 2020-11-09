@@ -17,6 +17,8 @@
 
 ![](./images/servidor/4-2.png)
 
+![](./images/servidor/4.png)
+
 - `systemctl restart ...`
 
 - A continuación, conectar a la inerfaz web de CUPS `localhost:631`
@@ -41,12 +43,11 @@ Ahora vamos a usar una impresora de forma local en el servidor de impresión.
 
 ![](./images/servidor/16.png)
 
-- Compronar el resultado. Los trabajos de impresión de la impresora virtual PDF se guardan en alguno de estos directorios.
+- Comprobar el resultado. Los trabajos de impresión de la impresora virtual PDF se guardan en alguno de estos directorios.
 
   >/home/desire/PDF
   >/var/spool/cups-pdf/server18g
 
-![](./images/servidor/)
 
 # 4. Comprobar que se imprime de forma remota
 

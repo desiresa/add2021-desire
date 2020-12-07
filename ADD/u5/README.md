@@ -6,11 +6,11 @@ Comprobamos el acceso al LDAP desde el cliente:
 - Ir a MV cliente
 - `nmap -Pn 172.19.18.31|grep -P '389|636'`, para comprobar que el servidor LDAP es accesible desde la MV2 Cliente
 
-![]()
+![](./images/Screenshot_1.png)
 
 - `ldapsearch -H ldap://172.19.18.31:389 -W -D "cn=Directory Manager" -b "dc=ldap18,dc=curso2021" "(uid=*)" | grep dn`, comprobamos que los usuarios del LDAP remoto son visibles en el cliente.
 
-![]()
+![](./images/Screenshot_2.png)
 
 # 2. Configurar autenticación LDAP
 
@@ -32,7 +32,7 @@ Vamos a configurar de la conexión del cliente con el servidor LDAP.
 
   - Contraseña: CLAVE del usuario cn=Directory Manager
 
-  ![]()
+  ![](./images/Screenshot_6.png)
 
 - Al final usar la opción de `Probar conexión`.
 
@@ -40,24 +40,7 @@ Vamos a configurar de la conexión del cliente con el servidor LDAP.
 
 - Vamos a la consola con ususario root, y probamos lo siguiente:
 
-![]()
+![](./images/Screenshot_4.png)
 
 
-
-
-
-
-
-
-# 3. Crear usuarios y grupos dentro del LDAP
-
-En este punto vamos a escribir información dentro del servidor de directorios LDAP. Este proceso se debe poder realizar tanto desde el Yast del servidor, como desde el Yast del cliente.
-
-- Ir a la MV cliente.
-- `Yast -> Usuarios Grupos`.
-- Set filter: `LDAP users`
-- Bind DN: `cn=Directory Manager, dc=ldap18,dc=curso2021`.
-- Crear el grupo villanos (Estos se crearán dentro de la ou=groups).
-- Crear los usuarios robot, baron (Estos se crearán dentro de la ou=people).
-- Consultar/comprobar el contenido de la base de datos LDAP.
-  - `ldapsearch -H ldap://172.19.18.31 -W -D "cn=Directory Manager" -b "dc=ldap18, dc=curso2021" "(uid=server18)"` comando para consultar en a base de datos LDAP la información del usuario con uid concreto.
+![](./images/Screenshot_5.png)

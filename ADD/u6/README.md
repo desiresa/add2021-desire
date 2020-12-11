@@ -19,7 +19,7 @@ Para confirmar que hay un servicio a la escucha en 4567, desde la máquina real 
 - En el HOST-CON-VAGRANT. Comprobaremos que el puerto 4567 está a la escucha.
   - `vagrant port` para ver la redirección de puertos de la máquina Vagrant.
 
-![]()
+![](./images/20.png)
 
 
   - En HOST-CON-VAGRANT, abrimos el navegador web con el URL `http://127.0.0.1:4567`.
@@ -84,24 +84,23 @@ Una vez hemos preparado la máquina virtual ya podemos crear el box.
 
 - `VBoxManage list vms`, comando de VirtualBox que muestra los nombres de nuestras MVs. Elegir una de las máquinas (VMNAME).
 
-![]()
+![](./images/14.png)
 
 - Nos aseguramos que la MV de VirtualBox VMNAME está apagada.
 
-![]()
 
 - `vagrant package --base VMNAME desire18.box`, para crear nuestra propia caja.
 
-![]()
+![](./images/15.png)
 
-- Comprobamos que se ha creado el fichero `desire18.box` en el directorio donde hemos ejecutado el comando.
+- Comprobamos que se ha creado el fichero `package.box` en el directorio donde hemos ejecutado el comando.
 
-![]()
+![](./images/21.png)
 
-- `vagrant box add desire/bull desire18.box`, añadimos la nueva caja creada por nosotros, al repositorio local de cajas vagrant de nuestra máquina.
+- `vagrant box add desire/bull package.box`, añadimos la nueva caja creada por nosotros, al repositorio local de cajas vagrant de nuestra máquina.
 
-![]()
+![](./images/16.png)
 
 - `vagrant box list`, consultar ahora la lista de cajas Vagrant disponibles.
 
-![]()
+![](./images/17.png)

@@ -2,7 +2,6 @@
 
 ## 3.2. Comprobar
 - Abrimos una nueva terminal
-
 - `docker ps`, nos muestra los contenedores en ejecución. Podemos apreciar que la última columna nos indica que el puerto 80 del contenedor está redireccionado a un puerto local `0.0.0.0.:PORT -> 80/tcp`.
 
 
@@ -14,7 +13,7 @@
 
 - Comprobar el accceso a `holamundo1.html`.
 
-![]()
+![](./images/Screenshot_17.png)
 
 - Paramos el contenedor `app2nginx1` y lo eliminamos.
 
@@ -35,18 +34,18 @@ Intercambiar nuestra imagen exportada con la de un compañero de clase.
 *Importar* imagen Docker desde fichero:
 
 - Coger la imagen de un compañero de clase.
+
+![](./images/Screenshot_23.png)
+
 - Nos llevamos el tar a otra máquina con docker instalado, y restauramos.
 - `docker load -i alumno18docker.tar`, cargamos la imagen docker a partir del fichero tar. Cuando se importa una imagen se muestra en pantalla las capas que tiene.
-
-![]()
-
 - `docker images`, comprobamos que la nueva images está disponible.
 
-![]()
+![](./images/Screenshot_24.png)
 
 - Probar a crear un contenedor (`app3alumno`), a partir de la nueva imagen.
 
-![]()
+![](./images/Screenshot_25.png)
 
 ## 4.2. Crear imagen Dockerfile
 El fichero Dockerfile contiene toda la información necesaria para construir el contenedor, veamos:

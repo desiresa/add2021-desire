@@ -120,26 +120,39 @@ Desde otra terminal:
 Ahora vamos a crear un contenedor "holamundo" y subirlo a Docker Hub.
 
 - Crear carpeta `docker18c`. Entrar en la carpeta.
-
-![]()
-
 - Crear fichero Dockerfile de modo que al ejecutar `docker run desire/holamundo` se mostrará en pantalla el mensaje siguiente:
 
->Hola Mundo!
+``````
+Hola Mundo!
 nombre-del-alumnoXX
 Proyecto dockerXXc
 Fecha actual
+``````
+![](./images/4.png)
 
-![]()
+![](./images/5.png)
+
+- A partir del Dockerfile crearemos la imagen `docker build -t desire/holamundo`.
+
+![](./images/20.png)
+
+- Comprobar que `docker run desire/holamundo`, se crear un contenedor que ejecuta el script.
+
+![](./images/21.png)
 
 - Registrarse en Docker Hub.
 
-![]()
+![](./images/1.png)
 
-- `docker login`, para abrir la conexión.
+- `docker login -u daisyrgb`, para abrir la conexión.
 
-![]()
+![](./images/27.png)
 
-- `docker push ...`, para subir la imagen a los repositorios de Docker.
+- `docker tag desire/holamundo:latest daisyrgb/holamuno:version1`, y etiquetamos la imagen con "version1".
 
-![]()
+![](./images/28.png)
+
+
+- `docker push daisyrgb/holamundo:version1`, para subir la imagen a los repositorios de Docker.
+
+![](./images/29.png)

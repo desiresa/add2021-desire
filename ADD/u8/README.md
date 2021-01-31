@@ -11,7 +11,7 @@ minion18g:
   True
 ````
 
-![]()
+![](./images/salt1.png)
 
 
 2. Versión de Salt instalada en los Minions.
@@ -20,7 +20,7 @@ minion18g:
 minion18g:
   2019.2.0
 ````
-![]()
+![](./images/salt2.png)
 
 ## 4.5. Aplicar estado (apache)
 Ir al Master:
@@ -76,3 +76,42 @@ Vamos a crear un estado llamado `users` que nos servirá para crear un grupo y u
 - Aplicar el estado.
 
 ## 5.2. Aplicar estado (files)
+
+- Crear estado `dirs` para crear las carpetas `private`(700), `public`(755) y `group`(750) en el HOME del usuario `koji`.
+
+![]()
+
+- Aplicar el estado `dirs`.
+
+
+
+## 5.3. Ampliar estado "apache"
+
+- Crear el fichero `/srv/salt/base/files/holamundo.txt`. Escribir dentro el nombre del alumno y la fecha actual.
+
+![]()
+
+- Incluir en el estado "apache" la creación del fichero "holamundo" en el Minion. Dicho fichero se descargará desde el servidor Salt Máster y se copiará en el Minion.
+
+
+``````
+holamundo:
+  file.managed:
+    - name: /srv/www/htdocs/holamundo.html
+    - source: salt://files/holamundo.html
+``````
+
+![]()
+
+- Ir al master y aplicar el estado "apache".
+
+
+
+
+
+
+
+
+
+
+## 6.2. Aplicar estado al minion18w

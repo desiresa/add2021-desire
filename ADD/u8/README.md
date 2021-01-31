@@ -3,7 +3,7 @@
 ## 3.4. Comprobar la conectividad
 Desde el Máster comprobamos:
 
-    1. Conectividad hacia los Minions.
+1. Conectividad hacia los Minions.
 
 ````
 # salt '*' test.ping
@@ -15,6 +15,7 @@ minion18g:
 
 
 2. Versión de Salt instalada en los Minions.
+
 ````
 # salt '*' test.version
 minion18g:
@@ -29,15 +30,15 @@ Ir al Master:
 
   - `salt '*' state.show_lowstate`
 
-![]()
+![](./images/1.png)
 
   - `salt '*' state.show_highstate`,
 
-![]()
+![](./images/2.png)
 
 - `salt '*' state.apply apache`, para aplicar el nuevo estado en todos los minions.
 
-![]()
+![](./images/3.png)
 
 
 `````
@@ -71,28 +72,38 @@ Vamos a crear un estado llamado `users` que nos servirá para crear un grupo y u
 
 - Crear directorio `/srv/salt/bases/users`.
 - Crear fichero `/srv/salt/base/users/init.sls` con las deficiones para crear lo siguiente:
-- Grupo `mazingerz`
-- Usuarios `koji18`, `drinfierno18` dentro de dicho grupo.
+  - Grupo `mazingerz`
+  - Usuarios `koji18`, `drinfierno18` dentro de dicho grupo.
+
+![](./images/4.png)
+
+![](./images/5.png)
+
 - Aplicar el estado.
+
+![](./images/8.png)
+
+![](./images/9.png)
 
 ## 5.2. Aplicar estado (files)
 
 - Crear estado `dirs` para crear las carpetas `private`(700), `public`(755) y `group`(750) en el HOME del usuario `koji`.
 
-![]()
+![](./images/11.png)
 
 - Aplicar el estado `dirs`.
 
-
+![](./images/12.png)
 
 ## 5.3. Ampliar estado "apache"
 
 - Crear el fichero `/srv/salt/base/files/holamundo.txt`. Escribir dentro el nombre del alumno y la fecha actual.
 
-![]()
+![](./images/13.png)
 
 - Incluir en el estado "apache" la creación del fichero "holamundo" en el Minion. Dicho fichero se descargará desde el servidor Salt Máster y se copiará en el Minion.
 
+![](./images/14.png)
 
 ``````
 holamundo:
@@ -101,17 +112,10 @@ holamundo:
     - source: salt://files/holamundo.html
 ``````
 
-![]()
+![](./images/15.png)
 
 - Ir al master y aplicar el estado "apache".
 
+![](./images/16.png)
 
-
-
-
-
-
-
-
-
-## 6.2. Aplicar estado al minion18w
+![](./images/17.png)

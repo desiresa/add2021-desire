@@ -51,32 +51,28 @@ elsif sys == '--status'
     end
 end
 
-#PASO 4: Parámetro --run FILENAME
+# PASO 4: Parámetro --run FILENAME
 elsif sys == '--run' then
-#Comprobar si lo ejecutamos como root
-    user = 'whoami'.chop
-  if user == "root" then
-  #Leemos el archivo filename.txt
-      File.open('filename.txt','r') do |f1|
-        while linea = f1.gets
-          b = linea.split(":")
-  #Instalar programas de filename
-          if b[1] == 'install' then
-            system = ("zypper install -y #{b[1]}")
-            puts "Instalando #{b[1]}"
-  #Desinstalar programas de filename
-          else b[1] == 'remove'
-            system = ("zypper remove #{b[1]}")
-            puts "Desinstalando #{b[1]}"
-
-          elsif usuario != "root"
-                puts "[ERROR] Tienes que ser usuario root"
-                exit 1
-
-
-          end
+  # Comprobar si lo ejecutamos como root
+  user = `whoami | grep root | wc -l`.chop
+  if user == "1" then
+    # Leemos el archivo filename.txt
+    File.open('filename.txt','r') do |f1|
+      while linea = f1.gets
+        b = linea.split(":")
+        if b[1].chomp == 'install' then
+          # Instalar programas de filename
+          system = ("zypper install -y #{b[1]}")
+          puts "Instalando #{b[0]}"
+        else b[1].chomp == 'remove'
+          # Desinstalar programas de filename
+          system = ("zypper remove #{b[1]}")
+          puts "Desinstalando #{b[0]}"
         end
       end
     end
+  else
+    puts "[ERROR] Tienes que ser usuario root"
+    exit 1
   end
-  ``````
+end
